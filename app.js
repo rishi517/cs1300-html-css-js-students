@@ -26,15 +26,25 @@ const updatePage = async () => {
 
   // Make API request and get an array of fruit objects
   const fruitsArray = await apiRequest();
-  // console.log(fruitsArray);
 
   // TODO: Use either `map` and/or `filter` to extract some data from the array of fruit objects
   // For example, find "name of all fruits whose sugar > 15",
+  const filtered = fruitsArray.filter(e => {
+    
+    return e.genus == "Malus";
+  })
+  console.log(filtered)
+  const mapped = filtered.map(e => {
+    console.log(e.name);
+    return e.name;
+  })
 
+  console.log(mapped)
   // TODO: Create a new HTML element to display your data
-
+  const newE = document.createElement('div');
+  newE.innerHTML = "Name of all fruits with Malus genus: " + mapped;
   // TODO: Append your new element to the page
-
+  document.body.append(newE);
 }
 
 // SAMPLE CODE of how to create and append a new HTML element to the page

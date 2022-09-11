@@ -6,7 +6,7 @@
 Selects all image tags and makes them 500px;
  */
 img {
-  width: 200;
+  width: 200px;
   height: 200px;
 }
 
