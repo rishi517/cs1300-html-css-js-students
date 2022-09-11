@@ -14,7 +14,7 @@ img {
   /* TODO add styles (hint: use flex!) https://www.w3schools.com/cssref/ */
   justify-content: space-around;
   align-content: space-around;
-  flex-direction: column;
   flex-wrap: wrap;
+  display: flex;
 }
 
